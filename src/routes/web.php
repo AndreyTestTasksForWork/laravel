@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/order-list', [OrderController::class, 'orderList']);
+Route::get('/order/edit/{id}', ['as' => 'order.edit', 'uses' => 'OrderController@edit']);
+Route::patch('/order/update/{id}', ['as' => 'order.update', 'uses' => 'OrderController@update']);

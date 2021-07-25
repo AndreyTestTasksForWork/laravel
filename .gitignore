@@ -2,3 +2,4 @@
 src/.env
 docker/db
 .idea
+log
