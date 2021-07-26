@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'yandex_weather_api' => [
+        'key' => env('YANDEX_WEATHER_API_KEY'),
+        'url' => env('YANDEX_WEATHER_API_URL')
+    ],
 ];

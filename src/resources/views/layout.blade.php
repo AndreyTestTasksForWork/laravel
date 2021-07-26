@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
 <div class="container">
     @yield('content')
+    <div id="app">
+        <weather></weather>
+    </div>
 </div>
-<script src="{{ asset('js/app.js') }}" type="text/js"></script>
 </body>
 </html>
